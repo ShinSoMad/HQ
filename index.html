@@ -1,50 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parallax2</title>
-    <link rel="stylesheet" href="style.css">
+<! -- 
+{% extends "base.html" %}
 
-    <script src="libs/gsap/gsap.min.js" defer></script>
-    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
-    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+{% block content %}
+-->
 
-    <script src="s.js" defer></script>
-</head>
+<link rel="stylesheet" href="style.css">
+
+
+
+
 <body>
-    <div class="wrapper">
-        <div class="content">
+  <div id="farmMain" class="farmMain">
+    <div class="main_inner_shadow_white"></div>
+    <div class="main_inner_shadow_yellow"></div>
+    <header>
+      <h1 class="name">{{ username }}</h1>
+      <div class="avatar"><img src="imgs/aaa.png"></div>
+    </header>
+    
+    <div id="farm_main_inner" class="farm_main_inner">
+      <div class="balanceMain">
+        <div class="balanceText"><p>Balance:</p></div>
+        <div class="balanceNum"><p>{{ balance }}</p></div>
+      </div>
+    
+      <div class="farm_but">
+        <button class="farm_but_inner"></button>
+      </div>
 
-            <header class="main_header">
-                <div class="layers">
-                    <div class="layers_header">
-        
-                        <div class="layers_caption">
-                            Creepin' Thru Da Woods
-                        </div>
-                        <div class="layers_title">
-                            Ritual
-                        </div>
-                    </div>
-                    <div class="layer layers_base" style="background-image:url(img/layer-base.png);"></div>
-                    <div class="layer layers_midle" style="background-image:url(img/layer-middle.png);"></div>
-                    <div class="layer layers_front" style="background-image:url(img/layer-front.png);"></div>
-                </div>
-            </header>
-            
-            <article class="main_article" style="background-image: url(img/dungeon.jpg);">
-                <div class="main_article_content">
-                    <h2 class="main_article_header">fuck the whole world</h2>
-                    <p class="main_article_paragraf">Creepin' through the woods, creepin' through the woods
-                        Creepin' through the woods, creepin' through the woods
-                        Creepin' through the woods, creepin' through the woods
-                        Creepin' through the woods</p>
-                </div>
-                <div class="copy">© Shinxxdd</div>
-            </article>
-            
-        </div>
+      <div class="load">
+        <button class="circle" name="farm_the_coin">{{ button }}</button>
+        <div class="loading_line"></div>
+      </div>
+      
     </div>
+    
+
+    
+    <div id="tasks_main_inner" class="tasks_main_inner">
+      <div class="points">
+          <div class="task_point">
+              <li class="task_point_inner">
+                  <h3>Subscribe to our telegram group !</h3>
+                  <div class="task_inner_text">
+                      <p>Subscribe to our channel and follow @HeadquatersVRCombat</p>
+                      <p><span>Reward:</span> 5.52 tokens</p>
+                      
+                  </div>
+                  <div class="task_inner_but">
+                      <p><span>Status:</span> <span style="color: rgb(223, 158, 38); font-weight: 500;"> In progress</span></p>
+                      <button><span>Check Completion</span></button>
+                  </div>
+              </li>
+          </div>  
+
+          <div class="task_point">
+              <li class="task_point_inner">
+                  <h3>Get 10 coins for first login</h3>
+                  <div class="task_inner_text">
+                      <p>Subscribe to our channel and follow @HeadquatersVRCombat</p>
+                      <p><span>Reward:</span> 10.00 tokens</p>
+                      
+                  </div>
+                  <div class="task_inner_but">
+                      <p><span >Status:</span> <span style="color: rgb(38, 223, 38); font-weight: 500;"> Complete</span></p>
+                      <button><span >Take reward</span></button>
+                  </div>
+              </li>
+          </div>
+
+          <div class="task_point">
+            <li class="task_point_inner">
+                <h3>Get 10 coins for first login</h3>
+                <div class="task_inner_text">
+                    <p>Subscribe to our channel and follow @HeadquatersVRCombat</p>
+                    <p><span>Reward:</span> 10.00 tokens</p>
+                    
+                </div>
+                <div class="task_inner_but">
+                    <p><span >Status:</span> <span style="color: rgb(38, 223, 38); font-weight: 500;"> Complete</span></p>
+                    <button><span >Take reward</span></button>
+                </div>
+            </li>
+        </div>
+      </div>
+
+      
+    </div>
+    <div id="ref_main_inner" class="ref_main_inner">
+      <div>
+          <p>112312313</p>
+      </div>
+    </div>
+   
+    <div id="wallet_main_inner" class="wallet_main_inner">
+      <div>
+          <p>aaaaaaa</p>
+      </div>
+    </div>
+
+    <div id="plannet_main_inner" class="plannet_main_inner">
+      <div>
+          <p>wwwwwww</p>
+      </div>
+    </div>
+
+    <div id="futor" class="futor">
+      
+        <li ><img onclick="foter(this)"  id="pageOne" class="page active" src="imgs/pageOne.png" alt=""></li>
+        <li ><img onclick="foter(this)"  id="pageTwo" class="page" src="imgs/pageTwo.png" alt=""></li>
+        <li ><img onclick="foter(this)"  id="pageThre" class="page" src="imgs/pageThre.png" alt=""></li>
+        <li ><img onclick="foter(this)"  id="pageFour" class="page" src="imgs/pageFour.png" alt=""></li>
+        <li ><img onclick="foter(this)"  id="pageFive" class="page" src="imgs/pageFive.png" alt=""></li>
+      
+    </div>
+    <div class="line222"></div>
+  </div>
+  
+
+
+  <!-- <div class="balance">Баланс: <span id="balance">{{ balance }}</span> монет</div>-->
+  
+  <!--<form method="POST" action="{% url 'user_press_button' %}">
+    {% csrf_token %}
+    
+  </form> -->
+  
+ 
+  
+  <script src="s.js"></script>
 </body>
-</html>
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector('button[name="farm_the_coin"]');
+
+    function isTimeFormat(text) {
+      return /^\d+:\d{2}:\d{2}$/.test(text); // Checks H:MM:SS format
+    }
+
+    function startCountdown(button) {
+      const parts = button.textContent.split(':').map(Number);
+      let hours = parts[0], minutes = parts[1], seconds = parts[2];
+
+      function updateButton() {
+        if (hours === 0 && minutes === 0 && seconds === 0) {
+          button.textContent = "Зафарми монету";
+          clearInterval(timer);
+          return;
+        }
+
+        // Decrement time
+        if (seconds > 0) {
+          seconds--;
+        } else if (minutes > 0) {
+          seconds = 59;
+          minutes--;
+        } else if (hours > 0) {
+          seconds = 59;
+          minutes = 59;
+          hours--;
+        }
+
+        button.textContent = `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      }
+
+      const timer = setInterval(updateButton, 1000);
+      updateButton();
+    }
+
+    if (button.textContent !== "Зафарми монету") {
+      if (isTimeFormat(button.textContent)) {
+        startCountdown(button);
+      } else {
+        button.textContent = "2:59:30"; // Set to initial time
+        startCountdown(button);
+      }
+    }
+  });
+</script>
+<!--{% endblock %}-->
