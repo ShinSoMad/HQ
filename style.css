@@ -301,6 +301,53 @@ li{
     left: 0;
     display: none;
 }
+.ref_content{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+}
+.ref_main_text{
+    padding-top: 3vh;
+    text-align: center;
+    font-size: 40px;
+}
+.ref_center{
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    grid-template-rows: 1fr;
+
+}
+.ref_center_line{
+    height: 100%;
+    width: 4px;
+    background-color: white;
+}
+.ref_center_text{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+}
+.ref_center_text p{
+    font-size: 50px;
+    font-weight: 500;
+}
+.ref_but{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.ref_but button{
+    width: 60%;
+    height: 8vh;
+    border-radius: 25px;
+    border: none;
+    font-size: 40px;
+    font-weight: 600;
+}
 .wallet_main_inner{
     width: 100%;
     height: 73vh;
@@ -316,4 +363,35 @@ li{
     top: 13vh;
     left: 0;
     display: none;
+}
+.wallet_content{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    padding-top: 3vh;
+}
+.wallet_text{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+.wallet_but{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.wallet_but button{
+    width: 60%;
+    height: 6vh;
+    border-radius: 25px;
+    border: none;
+    font-size: 40px;
+    font-weight: 600;
 }
